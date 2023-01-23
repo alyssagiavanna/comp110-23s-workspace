@@ -7,10 +7,11 @@ if (len(word) != 5):
     exit()
 
 character: str = input("Enter a single character: ")
-print("Searching for " + character + " in " + word)
 if (len(character) != 1):
     print("Error: Character must be a single character")
     exit()
+    
+print("Searching for " + character + " in " + word)
 
 number_of_match: int = 0
 
@@ -32,7 +33,7 @@ if (character == word[3]):
 
 if (character == word[4]):
     print(character + " found at index 4 ")
-    number_of_matchatch = number_of_match + 1
+    number_of_match = number_of_match + 1
 
 if (number_of_match == 0):
     print("No instances of " + character + " found in " + word)
@@ -42,4 +43,3 @@ if (number_of_match == 1):
 
 else: 
     print(str(number_of_match) + " instances of " + character + " found in " + word)
-
