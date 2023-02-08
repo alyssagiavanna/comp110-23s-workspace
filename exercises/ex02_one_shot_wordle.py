@@ -1,5 +1,5 @@
 """EX02 - One-Shot Wordle - Loops!"""
-__author__ = 730519262
+__author__ = "730519262"
 
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
@@ -21,18 +21,18 @@ while(index_check < len(winning_word)):
         guess_box = guess_box + GREEN_BOX
     #if not, check if letter in guessed word exists elsewhere in the winning word.
     else:
-        character_exists_elsewhere: bool = False
+        char_exist: bool = False
         alternate_indices: int = 0
         #check if character exists elsewhere in the winning word and if the index is less than the number of letters in the winning word.
-        while(character_exists_elsewhere is not True and alternate_indices < len(winning_word)):
+        while(char_exist is not True and alternate_indices < len(winning_word)):
             #if the index in the winning word is equal to the index in the word guessed, change character elsewhere to true.
             if(winning_word[alternate_indices] == word_guess[index_check]):
-                character_exists_elsewhere = True
+                char_exist = True
             #if not, go to the following index in the winning word and check if the character is in winning word and less than its index.
             else:
                 alternate_indices = alternate_indices + 1
         #if the character at a different index is in the winning word, show yellow square.
-        if(character_exists_elsewhere is True):
+        if(char_exist is True):
             guess_box = (guess_box + YELLOW_BOX)
         #if the character in the guessed word does not exist in the winning word, show white square.
         else:
