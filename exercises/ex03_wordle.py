@@ -53,7 +53,7 @@ def input_guess(word_length: int) -> str:
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
-    secret: str = "codes"
+    secret: str = "zoinks"
     trial: int = 1
     try_again: bool = False
 
